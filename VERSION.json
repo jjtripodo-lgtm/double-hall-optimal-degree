@@ -12,7 +12,10 @@
   "manuscript_license": "CC-BY-4.0",
   "code_license": "MIT",
   "fresh_lean_replay": false,
-  "hexagon_status": "SUBMITTED_AWAITING_MODERATION_NOT_PUBLIC",
+  "hexagon_status": "PUBLISHED_EMAIL_CONFIRMED",
+  "hexagon_url": "https://hexagonmath.org/2610.00462?version=1",
+  "hexagon_published_on": "2026-10-22",
+  "hexagon_source": "Hexagon publication confirmation email; public page/PDF byte identity not independently rechecked",
   "hexagon_id": "2610.00462v1",
   "paper_url": "https://github.com/jjtripodo-lgtm/double-hall-optimal-degree/blob/724ed6a8e76b6818e4a0a27b2ab0a16c457a5aa8/paper.pdf",
   "historical_zenodo_deposit": {
