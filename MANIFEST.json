@@ -39,8 +39,8 @@
       "sha256": "c89b75e1486bd98c4f7cf4dac6c8b102d904cc089b858a617f9ca13b49112846"
     },
     "README.md": {
-      "bytes": 1868,
-      "sha256": "a9ffc99a302b68d6e513a1d91e16c2005eac0d93e398c36598a7e612de2f713b"
+      "bytes": 1921,
+      "sha256": "f380550a3050452884c63b025ae42821a3fc9e186cb0f451769d52aa3a291659"
     },
     "RELEASE_NOTES.md": {
       "bytes": 862,
@@ -55,8 +55,8 @@
       "sha256": "a8f7a61c061655b77cd6063b6eda5fa105f81e7d5c28d437c501f843f1680251"
     },
     "VERSION.json": {
-      "bytes": 669,
-      "sha256": "2201585b29c31cc3cf58488e53d0da4af52c9c46a1c6a6deb850af862d4a0682"
+      "bytes": 717,
+      "sha256": "a52aaacb714a728bcc64de76997f81c3b6fecb84b57890fa4a7b4c68898277e3"
     },
     "build_paper.py": {
       "bytes": 2271,

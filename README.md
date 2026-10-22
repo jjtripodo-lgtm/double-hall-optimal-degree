@@ -8,6 +8,6 @@ Read [paper.pdf](paper.pdf), [paper.tex](paper.tex), [REPRODUCE.md](REPRODUCE.md
 
 Run `python3 verify_package.py` to check the exact file manifest, manuscript identities, references and citations. The finite controls in `check_construction.py` corroborate the construction; they do not establish the unbounded theorem. The pinned Lean companion and historical axiom audit are included, with the prime-interval input an explicit hypothesis. Fresh Lean compilation was not performed for this editorial revision.
 
-The manuscript is published on [Zenodo](https://zenodo.org/records/23552249), DOI [10.5281/zenodo.23552249](https://doi.org/10.5281/zenodo.23552249), version 1.0.1. This is the dedicated [public repository](https://github.com/jjtripodo-lgtm/double-hall-optimal-degree). Hexagon submission processing is in progress; no Hexagon publication is claimed.
+The manuscript is published on [Zenodo](https://zenodo.org/records/23552249), DOI [10.5281/zenodo.23552249](https://doi.org/10.5281/zenodo.23552249), version 1.0.1. This is the dedicated [public repository](https://github.com/jjtripodo-lgtm/double-hall-optimal-degree). Hexagon submission `2610.00462v1` is awaiting moderator review and is not yet public. The Zenodo DOI above is the published citation.
 
 The Zenodo companion archive preserves the exact reviewed editorial package. This repository changes publication metadata only; manuscript, formal sources, reproduction code, licenses, and historical receipts are unchanged. See HISTORICAL_VALIDATION.md for the distinction between earlier and current checks.
