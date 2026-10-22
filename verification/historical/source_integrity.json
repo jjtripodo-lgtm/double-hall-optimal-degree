@@ -1,0 +1,92 @@
+{
+  "status": "PASS_SOURCE_INTEGRITY_ONLY",
+  "source_files": [
+    {
+      "path": "DoubleHall/Asymptotic.lean",
+      "match": true
+    },
+    {
+      "path": "DoubleHall/Basic.lean",
+      "match": true
+    },
+    {
+      "path": "DoubleHall/Completion.lean",
+      "match": true
+    },
+    {
+      "path": "DoubleHall/Duplicate.lean",
+      "match": true
+    },
+    {
+      "path": "DoubleHall/Main.lean",
+      "match": true
+    },
+    {
+      "path": "DoubleHall/Orthogonal.lean",
+      "match": true
+    },
+    {
+      "path": "DoubleHall/Padding.lean",
+      "match": true
+    },
+    {
+      "path": "DoubleHall/Repair.lean",
+      "match": true
+    },
+    {
+      "path": "DoubleHall/Rook.lean",
+      "match": true
+    },
+    {
+      "path": "DoubleHall/RookInterp.lean",
+      "match": true
+    },
+    {
+      "path": "DoubleHall/Semibiplane.lean",
+      "match": true
+    },
+    {
+      "path": "DoubleHall/SemibiplaneCount.lean",
+      "match": true
+    },
+    {
+      "path": "DoubleHall/SemibiplaneFibers.lean",
+      "match": true
+    },
+    {
+      "path": "DoubleHall/SemibiplaneHall.lean",
+      "match": true
+    },
+    {
+      "path": "DoubleHall/SemibiplaneOrder.lean",
+      "match": true
+    },
+    {
+      "path": "DoubleHall/Transport.lean",
+      "match": true
+    },
+    {
+      "path": "DoubleHall.lean",
+      "match": true
+    },
+    {
+      "path": "AxiomAudit.lean",
+      "match": true
+    },
+    {
+      "path": "lakefile.toml",
+      "match": true
+    },
+    {
+      "path": "lake-manifest.json",
+      "match": true
+    },
+    {
+      "path": "lean-toolchain",
+      "match": true
+    }
+  ],
+  "missing_owned_imports": [],
+  "proof_escape_flags": [],
+  "fresh_lean_compilation": false
+}

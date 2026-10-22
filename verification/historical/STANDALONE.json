@@ -1,0 +1,10 @@
+{
+  "runs": [
+    {
+      "name": "double-hall-optimal-degree-latex",
+      "returncode": 0,
+      "byte_identical_to_frozen_pdf": true
+    }
+  ],
+  "fresh_lean_compilation": false
+}

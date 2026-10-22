@@ -1,0 +1,31 @@
+{
+  "title": "Asymptotically optimal degree for the double Hall property",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "description": "<p>The minimum maximum degree for the double Hall property is asymptotic to sqrt(2 n). Deterministic balanced regular bipartite constructions attain this leading constant with the property on both shores and degree at most sqrt(2 n)+O(n^(21/80)) for every sufficiently large n. The construction repairs homology semibiplanes, pads by matched duplication, and completes to regularity. The all-order error term invokes the published Baker-Harman-Pintz prime-interval theorem; the formal transfer keeps that input as an explicit hypothesis.</p>",
+  "creators": [
+    {
+      "name": "Tripodo, John",
+      "orcid": "0009-0006-9180-4953"
+    }
+  ],
+  "version": "1.0.1",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "keywords": [
+    "double Hall property",
+    "bipartite graphs",
+    "finite geometry",
+    "extremal graph theory"
+  ],
+  "notes": "Manuscript and research prose: CC BY 4.0. Original reproduction code: MIT. Third-party notices preserved. Internal AI-assisted review; see AI_ASSISTANCE.md and FORMAL_SCOPE.md. No fresh Lean compilation is claimed.",
+  "doi": "10.5281/zenodo.23552249",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/jjtripodo-lgtm/double-hall-optimal-degree",
+      "relation": "isSupplementedBy",
+      "scheme": "url",
+      "resource_type": "software"
+    }
+  ]
+}

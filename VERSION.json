@@ -1,0 +1,16 @@
+{
+  "version": "1.0.1",
+  "prepared": "2026-10-22",
+  "status": "PUBLISHED_ZENODO",
+  "title": "Asymptotically optimal degree for the double Hall property",
+  "author": "John Tripodo",
+  "orcid": "0009-0006-9180-4953",
+  "paper_tex_sha256": "f4f070a6f8b6ff0dbb884b2c4e52556ed8d09e5387cd5de62ccd016bdfb1aeca",
+  "paper_pdf_sha256": "0065147c616fd20290ebac0ebb79259a9e9a26774904fe0e159191548739e05d",
+  "paper_doi": "10.5281/zenodo.23552249",
+  "public_repository": "https://github.com/jjtripodo-lgtm/double-hall-optimal-degree",
+  "manuscript_license": "CC-BY-4.0",
+  "code_license": "MIT",
+  "fresh_lean_replay": false,
+  "hexagon_status": "PROCESSING_NOT_SUBMITTED"
+}

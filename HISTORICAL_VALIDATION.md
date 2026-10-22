@@ -1,0 +1,5 @@
+# Validation history and scope
+
+The 21 October 2026 package recorded a pdfLaTeX build using TeX Live 2023/Debian, standalone byte reproduction under that installation, source-integrity checks, finite construction controls, and an endpoint axiom audit. The original JSON receipts in `verification/historical/` retain their original source/PDF hashes and statements. They apply to that earlier manuscript. The endpoint axiom output remains in `companion/audit/axioms.txt`; it is historical evidence, not a fresh compiler result.
+
+For the 22 October editorial revision, the amended manuscript was built with Tectonic 0.17.0, every PDF page was rendered and inspected, finite controls ran in ordinary and optimized Python with equal outputs, and all 21 pinned owned Lean/configuration hashes matched. The scientific source files are unchanged. `verification/EDITORIAL_VALIDATION.json` identifies the amended TeX and PDF. No fresh Lean compilation, external human review, or public deposit is represented.

@@ -1,0 +1,442 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{array}
+\hypersetup{pdftitle={Asymptotically optimal degree for the double Hall property},pdfauthor={John Tripodo}}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\sn}{\operatorname{SN}}
+\newcommand{\freg}{f_{\mathrm{reg}}}
+\newcommand{\fbi}{f_{\mathrm{bi,reg}}}
+
+\title{Asymptotically optimal degree for the double Hall property}
+\author{John Tripodo}
+\thanks{\copyright\ 2026 John Tripodo. Licensed under \href{https://creativecommons.org/licenses/by/4.0/}{CC BY 4.0}. ORCID: \href{https://orcid.org/0009-0006-9180-4953}{0009-0006-9180-4953}.}
+\date{22 October 2026}
+
+\begin{document}
+
+\begin{abstract}
+A bipartite graph with parts $X$ and $Y$ has the double Hall property if every
+$A\subseteq X$ with $|A|\ge 2$ has at least $|A|$ vertices in $Y$ with two or more
+neighbours in $A$. Chen, Lavrov, Ma, Su and Vandenbussche showed that such a graph with
+$|X|=n$ has maximum degree at least $(1+o(1))\sqrt{2n}$, gave balanced regular
+constructions along infinitely many orders of degree $n^{\log_{79}13+o(1)}\approx n^{0.587}$, and random balanced
+constructions of degree $(1+o(1))\sqrt{2n\log n}$. We show that the counting bound is
+asymptotically sharp: for every sufficiently large $n$ there is a balanced $D$-regular
+bipartite graph with $n$ vertices in each part, with the double Hall property on
+\emph{both} sides, and
+\[
+  D \le \sqrt{2n} + O\!\left(n^{21/80}\right).
+\]
+The construction is deterministic. It repairs the empty class rectangles of the classical
+homology semibiplane by rook-type local graphs, then pads and completes the result to any
+order. The error exponent is half of any admissible short-prime-interval exponent.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+Let $G$ be a bipartite graph with parts $X$ and $Y$. For $A\subseteq X$ write
+\[
+  \sn(A)=\{y\in Y:\ |N(y)\cap A|\ge 2\}
+\]
+for the \emph{super-neighbours} of $A$. Following Chen, Lavrov, Ma, Su and
+Vandenbussche~\cite{CLMSV}, $G$ has the \emph{double Hall property} (on $X$) if
+$|\sn(A)|\ge|A|$ for every $A\subseteq X$ with $|A|\ge 2$. The property is motivated by
+cycle questions of Salia and others; see~\cite{CLMSV,BGJNP}.
+
+For $n\ge2$, let $f(n)$ be the least maximum degree of a double-Hall graph with $|X|=n$, and let
+$\freg(n)$ be the least $d$ for which a balanced $d$-regular graph with $n$ vertices in
+each part has the property. Applying the definition to the pairs $\{x,x'\}$ shows that every
+two vertices of $X$ have at least two common neighbours. Counting paths of length two from a
+fixed $x$ gives
+\begin{equation}\label{eq:lower}
+  2(n-1)\le \Delta(\Delta-1),\qquad\text{so}\qquad f(n)\ge \tfrac12\bigl(1+\sqrt{8n-7}\bigr)
+\end{equation}
+\cite[Theorem~1.10]{CLMSV}. The same paper constructs balanced regular examples along infinitely many orders of degree
+$n^{\log_{79}13+o(1)}$ \cite[Theorem~1.11]{CLMSV} and shows that random balanced graphs
+of degree $(1+o(1))\sqrt{2n\log n}$ work \cite[Theorem~1.12]{CLMSV}.
+
+Write $\fbi(n)$ for the least degree of a balanced regular graph with the double Hall
+property on both $X$ and $Y$. Clearly $f(n)\le\freg(n)\le\fbi(n)$.
+
+\begin{theorem}\label{thm:main}
+As $n\to\infty$,
+\[
+  f(n),\ \freg(n),\ \fbi(n) \;=\; (1+o(1))\sqrt{2n}.
+\]
+More precisely, $\fbi(n)\le\sqrt{2n}+O(n^{21/80})$ for all sufficiently large $n$.
+\end{theorem}
+
+The exponent comes from prime gaps. We prove the following transfer statement.
+
+\begin{theorem}\label{thm:transfer}
+Let $\tfrac12\le\theta<1$. Suppose that for all sufficiently large real $x$ there is a prime
+in $[x-x^\theta,x]$. Then $\fbi(n)\le\sqrt{2n}+O(n^{\theta/2})$, and a witnessing graph
+can be computed deterministically in time polynomial in $n$.
+\end{theorem}
+
+Baker, Harman and Pintz~\cite{BHP} proved the hypothesis with $\theta=21/40$, which gives
+Theorem~\ref{thm:main}. Their threshold is effectively determinable, although
+we do not compute a numerical value here. Any improvement in short-interval prime results improves the error
+term in the same way; for example, the preprint~\cite{Li} claims $\theta=0.52$.
+
+Along the orders $N=(q^2-1)/2$ with $q$ an odd prime power, no prime-gap input is needed.
+
+\begin{theorem}\label{thm:semibiplane}
+Let $q\ge 1153$ be an odd prime power, $N=(q^2-1)/2$ and $g=(q-1)/2$. There is a balanced
+regular bipartite graph with $N$ vertices in each part, with the double Hall property on both
+sides, of degree
+\[
+  q+2\lfloor\sqrt g\rfloor+4 \;=\; \sqrt{2N}+O(N^{1/4}).
+\]
+\end{theorem}
+
+The constant $1153$ is the first odd $q$ with $g=(q-1)/2\ge 576$ (Lemma~\ref{lem:rook-interp}).
+For smaller $q$ one can use $K_{g,g}$ in the repair step, at the cost of a worse
+second-order term.
+
+\subsection*{Method}
+The starting point is the classical homology semibiplane over $\F_q$ \cite{Moorhouse}. Its
+signed incidence matrix has orthogonal rows, so by the strong-quadrangularity principle
+of Severini~\cite{Severini,SeveriniSzollosi} every point set that is not contained in one
+parallel class has enough super-neighbours (Section~\ref{sec:semibiplane}). The only
+failures are sets inside a single parallel class, and each such class faces an empty block
+class. We fill these $q+1$ empty rectangles with a balanced regular double-Hall graph of
+degree $O(\sqrt q)$, built from rook graphs (Section~\ref{sec:rook}). This costs only a
+lower-order term in the degree. To reach every order $n$ we duplicate whole parallel
+classes, which raises each degree by an explicitly bounded amount, and then complete to a
+regular graph using a sparse degree-completion lemma proved from Hall's theorem
+(Section~\ref{sec:completion}).
+
+\subsection*{What is not new}
+Homology semibiplanes, strong quadrangularity, rook graphs, vertex twinning and degree
+completion via flows or matchings are classical; we credit each where it is used. The
+contribution is their combination for the double Hall degree problem, which closes the
+gap between the counting bound~\eqref{eq:lower} and the best previous construction.
+
+\section{Notation and two monotonicity facts}
+
+All graphs are finite, simple and bipartite with a fixed bipartition $(X,Y)$. Adding edges
+cannot destroy a super-neighbour, so the double Hall property is preserved under adding
+edges. If $X$ is partitioned into classes, a set $A\subseteq X$ with $|A|\ge2$ either meets
+two classes or lies in one class.
+
+\begin{lemma}[class repair]\label{lem:repair}
+Let $X$ be partitioned into classes. Let $B$ and $L$ be bipartite graphs on $(X,Y)$. Suppose
+$|\sn_B(A)|\ge|A|$ whenever $|A|\ge2$ and $A$ meets two classes, and
+$|\sn_L(A)|\ge|A|$ whenever $|A|\ge2$ and $A$ lies in one class. Then $B\cup L$ has the
+double Hall property on $X$. If $B$ and $L$ are edge-disjoint, degrees in $B\cup L$ are
+sums of degrees in $B$ and in $L$.
+\end{lemma}
+
+\section{Orthogonal supports}
+
+\begin{lemma}[strong quadrangularity {\cite{Severini,SeveriniSzollosi}}]\label{lem:orth}
+Let $W$ be a real matrix with rows indexed by $X$ and columns by $Y$. Let $A\subseteq X$,
+and let $C(A)$ be the set of columns with at least two nonzero entries in the rows of $A$.
+Suppose the rows of $A$ are pairwise orthogonal, and every row of $A$ shares a nonzero
+column with another row of $A$. Then $|C(A)|\ge|A|$.
+\end{lemma}
+
+\begin{proof}
+Restrict the rows of $A$ to the columns in $C(A)$. A column outside $C(A)$ has at most one
+nonzero entry in the rows of $A$, so deleting it changes no inner product between distinct
+rows of $A$. Hence the restricted rows are still pairwise orthogonal. Every row of $A$ shares a
+nonzero column $y$ with another row of $A$; then $y\in C(A)$, so the restricted row is
+nonzero. Pairwise orthogonal nonzero vectors are linearly independent, so
+$|A|\le\dim\mathbb{R}^{C(A)}=|C(A)|$.
+\end{proof}
+
+\section{The homology semibiplane}\label{sec:semibiplane}
+
+Let $q$ be an odd prime power and $\F=\F_q$. Let $P$ be the set of nonzero vectors of
+$\F^2$ modulo $u\sim-u$, so $|P|=(q^2-1)/2=:N$. Take $X$ and $Y$ to be two disjoint copies
+of $P$ and join $[u]\in X$ to $[v]\in Y$ when $u\cdot v\in\{1,-1\}$. This relation does not
+depend on the chosen representatives. This is the Desarguesian homology semibiplane
+\cite[\S\S1--2]{Moorhouse}.
+
+\begin{lemma}\label{lem:sb-basic}
+\begin{enumerate}
+\item The graph is $q$-regular.
+\item Partition $X$ into the $q+1$ parallel classes $C_\ell=\{[u]:u\in\ell\}$, one for
+each one-dimensional subspace $\ell$; each has $g=(q-1)/2$ elements. Partition $Y$ into
+$E_\ell=\{[v]:v\in\ell^\perp\}$. There are no edges between $C_\ell$ and $E_\ell$.
+\item Every $y\in Y$ has at most one neighbour in each class $C_\ell$, and every $x\in X$
+has at most one neighbour in each class $E_\ell$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(1) For $u\ne0$, each affine line $\{v:u\cdot v=s\}$ has $q$ points, and the lines for
+$s=1$ and $s=-1$ are disjoint and swapped by $v\mapsto-v$. So exactly $q$ classes $[v]$
+are adjacent to $[u]$. The same holds with the roles of $u$ and $v$ exchanged.
+(2) A line through the origin has $q-1$ nonzero vectors, forming $(q-1)/2$ classes. If
+$u\in\ell$ and $v\in\ell^\perp$ then $u\cdot v=0$.
+(3) If $u$ and $\lambda u$ both satisfy $u\cdot v,\ \lambda u\cdot v\in\{\pm1\}$, then
+$\lambda=\pm1$, so $[\lambda u]=[u]$. The second statement is symmetric.
+\end{proof}
+
+\begin{proposition}\label{prop:sb-hall}
+If $A\subseteq X$ meets two parallel classes, then $|\sn(A)|\ge|A|$. The same holds on $Y$.
+\end{proposition}
+
+\begin{proof}
+Choose representatives and define $W_{[u],[v]}=1$ if $u\cdot v=1$, $W_{[u],[v]}=-1$ if
+$u\cdot v=-1$, and $0$ otherwise. Its nonzero pattern is the incidence. Write
+$\sigma(t)\in\{1,-1,0\}$ for this sign of $t\in\F$, so $\sigma(-t)=-\sigma(t)$.
+
+\emph{Orthogonality.} Let $[a]\ne[b]$. The product $\sigma(a\cdot v)\sigma(b\cdot v)$ is
+even in $v$, so the inner product of rows $[a]$ and $[b]$ is half the sum of this product
+over all $v\in\F^2$. If $a,b$ are linearly independent, $v\mapsto(a\cdot v,b\cdot v)$ is a
+bijection of $\F^2$. The sum then equals $(\sum_{s\in\F}\sigma(s))^2=0$. If $b=\lambda a$,
+both factors are nonzero only when $\lambda=\pm1$, which would give $[a]=[b]$. So every
+term vanishes.
+
+\emph{Sharing.} If $A$ meets two classes, every $[a]\in A$ has some $[b]\in A$ in another
+class. Then $a,b$ are independent, so some $v$ has $a\cdot v=b\cdot v=1$, and column $[v]$
+is nonzero in both rows.
+
+Lemma~\ref{lem:orth} now gives $|\sn(A)|=|C(A)|\ge|A|$. The incidence is symmetric under
+exchanging $X$ and $Y$, and the classes $E_\ell$ correspond to the classes
+$C_{\ell^\perp}$, so the same argument applies on $Y$.
+\end{proof}
+
+\section{Rook graphs and matched duplication}\label{sec:rook}
+
+\begin{lemma}[rook cross]\label{lem:rook}
+For $m\ge2$ let $X=Y=[m]^2$ (disjoint copies), with $(a,b)\in X$ adjacent to $(i,j)\in Y$
+when $a=i$ or $b=j$. This graph is $(2m-1)$-regular, contains the diagonal matching
+$(a,b)\leftrightarrow(a,b)$, and has the double Hall property on both sides.
+\end{lemma}
+
+\begin{proof}
+Regard $A\subseteq X$ as a set of occupied cells. An occupied cell is itself a
+super-neighbour unless it is alone in both its row and its column; call such cells
+\emph{isolated}. All other occupied cells are distinct super-neighbours. If there are $k\ge2$
+isolated cells $(a_1,b_1),\dots,(a_k,b_k)$, their rows and columns are distinct, and the
+unoccupied cells $(a_i,b_{i+1})$ (indices mod $k$) are $k$ further distinct
+super-neighbours. If there is exactly one isolated cell $(a,b)$, take another occupied cell
+$(c,d)$. The cell $(a,d)$ is unoccupied, since $(a,b)$ is alone in its row, and it sees both.
+So it is one more super-neighbour. In all cases $|\sn(A)|\ge|A|$. The graph is symmetric.
+\end{proof}
+
+\begin{lemma}[matched duplication]\label{lem:dup}
+Let $H$ be balanced, with $X=\{x_i\}$, $Y=\{y_i\}$ and every $x_iy_i$ an edge, and with the
+double Hall property on both sides. For a set $T$ of indices, duplicate $x_i$ and $y_i$ for
+each $i\in T$, copying all incidences, including those between duplicates. The result has
+the double Hall property on both sides. If $H$ is $d$-regular, the new degree of a copy of
+$x_i$ is $d+|N_H(x_i)\cap\{y_j:j\in T\}|$, and symmetrically on $Y$.
+\end{lemma}
+
+\begin{proof}
+Let $A$ be a set of new left vertices, $B$ its set of original indices, and $k$ the number
+of doubled indices with both copies in $A$, so $|A|=|B|+k$. If $|B|\ge2$, every
+super-neighbour of $B$ in $H$ is a super-neighbour of $A$. Each doubled index $i$ also gives
+the duplicate of $y_i$, which sees both copies of $x_i$; these are $k$ further distinct
+super-neighbours. If $|B|=1$, then $A$ is one doubled pair, which has two common neighbours
+$y_i,y_i'$. The other side is symmetric.
+\end{proof}
+
+\section{Sparse regular completion}\label{sec:completion}
+
+\begin{lemma}[completion]\label{lem:completion}
+Let $H$ be a balanced bipartite graph with $n$ vertices per side and maximum degree at most
+$D\le n$. Let $\alpha_x=D-\deg_H x$ and $\beta_y=D-\deg_H y$, with total deficit
+$T_0=\sum\alpha_x=\sum\beta_y$, largest deficits $a=\max\alpha$, $b=\max\beta$, and largest
+degrees $r=\max_X\deg_H$, $c=\max_Y\deg_H$. If
+\[
+  T_0\ \ge\ ac+br+2ab,
+\]
+then $H$ is a subgraph of a simple $D$-regular bipartite graph on the same parts.
+\end{lemma}
+
+\begin{proof}
+We need a subgraph $F$ of the bipartite complement $\bar H$ with $\deg_F x=\alpha_x$ and
+$\deg_F y=\beta_y$.
+
+\emph{Reduction to a perfect matching.} Build a bipartite graph $\Gamma$ (Tutte's gadget).
+Its left part is $\alpha_x$ copies of each $x$, together with one vertex $e^Y$ for each edge
+$e$ of $\bar H$. Its right part is $\beta_y$ copies of each $y$, together with one vertex
+$e^X$ for each $e$. Join every copy of $x$ to $e^X$ for each $e\ni x$. Join $e^Y$ to $e^X$.
+Join $e^Y$ to every copy of $y$ for each $e\ni y$. Both parts have $T_0+|E(\bar H)|$
+vertices. In a perfect matching, put $e=xy$ into $F$ exactly when $e^X$ is matched to a
+copy of $x$. This happens exactly when $e^Y$ is matched to a copy of $y$. Then $F$ has the
+required degrees.
+
+\emph{Hall's condition.} Let $S$ be a set of left vertices. Let $U$ be the set of $x$ having a
+copy in $S$, and let $S_2$ be the set of gadget edges $e^Y$ in $S$, with $Y$-endpoints $V$.
+Then $N(S)$ contains every $e^X$ with $e$ at $U$ or $e\in S_2$, and every copy of every
+$y\in V$. Enlarging $S_2$ to all edges of $\bar H$ at $V$ does not change $V$, so in
+checking $|N(S)|\ge|S|$ we may assume this. With $V'=Y\setminus V$ the requirement becomes
+\begin{equation}\label{eq:cut}
+  \alpha(U)+\beta(V')-T_0\ \le\ e_{\bar H}(U,V')\qquad(U\subseteq X,\ V'\subseteq Y).
+\end{equation}
+If $|V'|\ge r+a$ then $e_{\bar H}(U,V')\ge|U|(|V'|-r)\ge a|U|\ge\alpha(U)$, which
+dominates the left side. If $|U|\ge c+b$ the symmetric bound applies. Otherwise
+$\alpha(U)+\beta(V')\le a(c+b)+b(r+a)\le T_0$. So~\eqref{eq:cut} holds, and Hall's theorem
+gives the perfect matching.
+\end{proof}
+
+\begin{remark}
+The inequality \eqref{eq:cut} is the cut condition of the integral flow formulation, which
+also gives a polynomial-time algorithm. The reduction through Hall's theorem is used here
+because it is elementary and is the route taken in the formalization.
+\end{remark}
+
+\begin{lemma}[rook interpolation]\label{lem:rook-interp}
+For every $g\ge576$ there is a balanced regular bipartite graph on $g+g$ vertices with the
+double Hall property on both sides, containing a perfect matching, of degree
+$2\lfloor\sqrt g\rfloor+4$.
+\end{lemma}
+
+\begin{proof}
+Let $m=\lfloor\sqrt g\rfloor$ and $t=g-m^2\le 2m$. In the rook-cross graph on $[m]^2$
+duplicate $t$ distinct cells from the two cyclic diagonals $\{(i,i)\}\cup\{(i,i+1)\}$.
+Every row and every column of $[m]^2$ then contains at most two selected cells, so each
+rook neighbourhood contains at most four selected cells. An original vertex
+and its duplicate have the same original neighbourhood, so each gains at most
+four edges from the duplication. By Lemma~\ref{lem:dup}, all degrees lie in
+$[2m-1,2m+3]$. Complete to $D=2m+4$ by Lemma~\ref{lem:completion}. Here $T_0\ge g$,
+$a,b\le5$ and $r,c\le 2m+3$, so the condition holds once $m^2\ge 20m+80$, that is, $m\ge24$.
+Completion adds edges, so both double Hall properties and the diagonal
+matching survive by monotonicity.
+\end{proof}
+
+\section{Proofs of the main theorems}
+
+\begin{proof}[Proof of Theorem~\ref{thm:semibiplane}]
+Take the semibiplane of Section~\ref{sec:semibiplane}. For each $\ell$ identify $C_\ell$ and
+$E_\ell$ with the two parts of the graph of Lemma~\ref{lem:rook-interp} on $g$ vertices,
+of degree $h=2\lfloor\sqrt g\rfloor+4$, and insert it into the empty rectangle
+$C_\ell\times E_\ell$. The inserted graphs are edge-disjoint from the base and from each
+other. So the result is $(q+h)$-regular. Sets meeting two classes are handled by
+Proposition~\ref{prop:sb-hall}, sets inside one class by the local graph, and
+Lemma~\ref{lem:repair} applies on both sides.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:transfer}]
+Let $Q=\sqrt{2n+1}$. By the hypothesis there is an odd prime $q\le Q$ with
+$Q-q=O(Q^\theta)$. Put $N=(q^2-1)/2\le n$, $g=(q-1)/2$ and $t=n-N=(Q-q)(Q+q)/2=O(q^{1+\theta})$.
+Let $G$ be the $d$-regular graph of Theorem~\ref{thm:semibiplane}, $d=q+O(\sqrt q)$. The
+local diagonals give a perfect matching $x\leftrightarrow\pi(x)$ with $\pi(C_\ell)=E_\ell$.
+
+\emph{Class-block padding.} Write $t=kg+s$ with $0\le s<g$, and order the parallel classes
+$\ell_1,\ell_2,\dots$. Let $T$ consist of all indices in $C_{\ell_1},\dots,C_{\ell_k}$
+together with $s$ indices of $C_{\ell_{k+1}}$. This needs $k+1\le q+1$, which holds for
+large $n$ since $t=o(N)$. Duplicate $T$ by Lemma~\ref{lem:dup}. Consider any original
+$x\in C_\ell$. By Lemma~\ref{lem:sb-basic}(3) its base neighbours meet each block class in at
+most one vertex. Its local neighbours lie in $E_\ell$. The duplicated columns lie in at most
+$k+1$ block classes. Hence the load of $x$ is at most
+\[
+  R := k+1+h,
+\]
+and likewise on $Y$. All degrees now lie in $[d,d+R]$, and both sides have the double Hall
+property.
+
+\emph{Completion.} Set $D=d+R+1$. Then $T_0\ge n$, $a,b\le R+1$ and $r,c\le d+R$, so
+Lemma~\ref{lem:completion} applies once $n\ge 2(R+1)(d+R)+2(R+1)^2$. Since
+$k\le t/g=O(q^\theta)$ and $h=O(\sqrt q)$, we have $R=O(q^\theta)$ and
+$(R+1)(d+R)=O(q^{1+\theta})=o(n)$, so the condition holds for large $n$. Completion only adds edges, and therefore
+preserves the double Hall property on both sides. The final degree is
+\[
+  D=q+O(q^\theta)=\sqrt{2n}+O(n^{\theta/2}).
+\]
+Every step is explicit: finding $q$, finite-field arithmetic, the rook graphs, duplication,
+and two completions computed by integral max-flow.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Combine Theorem~\ref{thm:transfer} with $\theta=21/40$ \cite{BHP} and the lower
+bound~\eqref{eq:lower}, which applies already to one side.
+\end{proof}
+
+\section{Remarks and open problems}
+
+\begin{enumerate}
+\item The order of magnitude of the repair degree is optimal for this base. If edges are added to the
+homology semibiplane so that every vertex gains at most $r$ edges and double Hall holds on
+both sides, then $r(r+1)\ge q-3$. Indeed, same-class pairs have no common neighbour in the
+base, and each pair needs two. At each column, new--old common-neighbour witnesses
+contribute at most $r$, and new--new witnesses at most $\binom r2$. Thus
+$N(g-1)\le N(r+\binom r2)$, giving the asserted bound. So the $N^{1/4}$-order second term in
+Theorem~\ref{thm:semibiplane} cannot be improved by local repair of this base.
+\item Exact values of $\freg(n)$ remain open. Equality in \eqref{eq:lower} forces a
+biplane-type structure. Infinite families of biplanes are not known.
+\item Our graphs say nothing directly about the cycle conjectures that motivate the
+double Hall property \cite{CLMSV,BGJNP}.
+\end{enumerate}
+
+\section*{Formal verification}
+The counting, construction and existence statements mapped below have a Lean~4
+formalization with Mathlib (commit \texttt{0ed37c9258f1}). The prime-interval input
+\cite{BHP} is an explicit hypothesis of the formal transfer theorem, not a result proved
+inside the companion. The algorithmic complexity remarks and the augmentation lower bound
+in the first item of the preceding section are written arguments, not claims of formal
+coverage by this companion. Every declaration in the recorded endpoint audit depends only
+on \texttt{propext}, \texttt{Classical.choice} and \texttt{Quot.sound}.
+
+\medskip
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.43\textwidth}>{\raggedright\arraybackslash}p{0.5\textwidth}}
+Paper & Lean declaration (namespace \texttt{DoubleHall})\\\hline
+Lower bound \eqref{eq:lower} & \texttt{pair\_count\_lower\_bound}, \texttt{hasRegularBoth\_lower}\\
+Lemma~\ref{lem:repair} & \texttt{doubleHallLeft\_union\_of\_classes}, \texttt{localRel\_hall}\\
+Lemma~\ref{lem:orth} & \texttt{card\_le\_card\_multiCols}\\
+Lemma~\ref{lem:sb-basic}, Prop.~\ref{prop:sb-hall} & \texttt{Semibiplane.degL\_inc}, \texttt{two\_mul\_card\_cls},
+  \texttt{not\_inc\_of\_cls\_eq\_clsY}, \texttt{inc\_cls\_unique}, \texttt{W\_orthogonal},
+  \texttt{card\_le\_superNbrs\_of\_not\_inOneClass}\\
+Lemma~\ref{lem:rook} & \texttt{Rook.doubleHallLeft}, \texttt{Rook.degL\_eq}\\
+Lemma~\ref{lem:dup} & \texttt{Dup.doubleHallLeft}, \texttt{Dup.degL\_dup}\\
+Lemma~\ref{lem:completion} & \texttt{exists\_factor}, \texttt{cutCondition\_of\_sparse},
+  \texttt{exists\_regular\_supergraph}\\
+Lemma~\ref{lem:rook-interp} & \texttt{RookInterp.exists\_local}\\
+Theorem~\ref{thm:semibiplane} & \texttt{semibiplane\_order\_theorem}\\
+Class-block padding & \texttt{Semibiplane.padding\_theorem}\\
+Theorem~\ref{thm:transfer} & \texttt{transfer\_theorem} (explicit constant $33$)\\
+\end{tabular}
+
+\medskip
+The formal statement of Theorem~\ref{thm:transfer} is: if $\tfrac12\le\theta<1$ and every
+sufficiently large real $x$ has a prime in $[x-x^\theta,x]$, then for all large $n$ there is a
+balanced $D$-regular graph with $n$ vertices per side, double Hall on both sides, and
+$D\le\sqrt{2n}+33\,n^{\theta/2}$. The algorithmic remarks in the proofs are not formalized: the
+formal theorems are existence statements.
+
+\section*{Use of AI tools}
+AI tools were used for exploration, drafting, computation and formalization. The author
+is responsible for the mathematical statements, proofs, source comparisons and final text.
+
+\begin{thebibliography}{99}
+\raggedright
+\bibitem{BHP} R.~C.~Baker, G.~Harman and J.~Pintz, The difference between consecutive
+primes, II, \emph{Proc. London Math. Soc.} (3) 83 (2001), 532--562.
+\bibitem{BGJNP} J.~Bar\'at, A.~Grzesik, A.~Jung, Z.~L.~Nagy and D.~P\'alv\"olgyi, The double
+Hall property and cycle covers in bipartite graphs, \emph{Discrete Math.} 347 (2024), 114079.
+\bibitem{CLMSV} G.~Chen, M.~Lavrov, Y.~Ma, Y.~Su and J.~Vandenbussche, Bipartite graphs with
+the double Hall property, \emph{Frontiers in Combinatorics and Number Theory} 1 (2026), 38--59,
+doi:10.3934/fcnt.2026005.
+\bibitem{Li} R.~Li, The number of primes in short intervals and numerical calculations for
+Harman's sieve, \mbox{arXiv:2308.04458v8} (2025), preprint.
+\bibitem{Moorhouse} G.~E.~Moorhouse, On the construction of finite projective planes from
+homology semibiplanes, \emph{European J. Combin.} 11 (1990), 589--600.
+\bibitem{Severini} S.~Severini, On the digraph of a unitary matrix, \emph{SIAM J. Matrix Anal.
+Appl.} 25 (2003), 295--300; \mbox{arXiv:math/0205187}.
+\bibitem{SeveriniSzollosi} S.~Severini and F.~Sz\"oll\H{o}si, A further look into
+combinatorial orthogonality, \emph{Electron. J. Linear Algebra} 17 (2008), 376--388.
+\end{thebibliography}
+
+\end{document}

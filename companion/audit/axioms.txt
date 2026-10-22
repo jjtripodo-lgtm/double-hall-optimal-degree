@@ -1,0 +1,35 @@
+DoubleHall.semibiplane_order_theorem : ∀ (F : Type u_1) [inst : Field F] [inst_1 : Fintype F] [DecidableEq F],
+  2 ≠ 0 →
+    1153 ≤ Fintype.card F →
+      DoubleHall.HasRegularBoth ((Fintype.card F ^ 2 - 1) / 2)
+        (Fintype.card F + (2 * ((Fintype.card F - 1) / 2).sqrt + 4))
+'DoubleHall.semibiplane_order_theorem' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DoubleHall.pair_count_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DoubleHall.RookInterp.exists_local' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DoubleHall.exists_regular_supergraph' depends on axioms: [propext, Classical.choice, Quot.sound]
+'DoubleHall.Semibiplane.card_le_superNbrs_of_not_inOneClass' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DoubleHall.Semibiplane.padding_theorem : ∀ {F : Type u_1} [inst : Field F] [inst_1 : Fintype F] [DecidableEq F],
+  2 ≠ 0 →
+    ∀ {n q g h d N t k R : ℕ},
+      Fintype.card F = q →
+        1153 ≤ q →
+          g = (q - 1) / 2 →
+            h = 2 * g.sqrt + 4 →
+              d = q + h →
+                N = (q ^ 2 - 1) / 2 →
+                  N ≤ n →
+                    t = n - N →
+                      k = t / g →
+                        R = k + 1 + h →
+                          k ≤ q →
+                            2 * (R + 1) * (d + R) + 2 * (R + 1) * (R + 1) ≤ n → DoubleHall.HasRegularBoth n (d + R + 1)
+'DoubleHall.Semibiplane.padding_theorem' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DoubleHall.transfer_theorem : ∀ {θ : ℝ},
+  1 / 2 ≤ θ →
+    θ < 1 →
+      DoubleHall.PrimeIntervalHyp θ →
+        ∃ n₀, ∀ (n : ℕ), n₀ ≤ n → ∃ D, DoubleHall.HasRegularBoth n D ∧ ↑D ≤ √(2 * ↑n) + 33 * ↑n ^ (θ / 2)
+'DoubleHall.transfer_theorem' depends on axioms: [propext, Classical.choice, Quot.sound]
+@DoubleHall.hasRegularBoth_lower : ∀ {n D : ℕ}, 1 ≤ n → DoubleHall.HasRegularBoth n D → 2 * (n - 1) ≤ D * (D - 1)
+'DoubleHall.hasRegularBoth_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+

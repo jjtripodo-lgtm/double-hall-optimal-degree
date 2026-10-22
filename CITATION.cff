@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "Please cite the paper using its version-specific Zenodo DOI."
+type: software
+license: MIT
+title: "Asymptotically optimal degree for the double Hall property"
+version: "1.0.1"
+authors:
+  - family-names: Tripodo
+    given-names: John
+    orcid: https://orcid.org/0009-0006-9180-4953
+abstract: "The minimum maximum degree for the double Hall property is asymptotic to sqrt(2 n). Deterministic balanced regular bipartite constructions attain this leading constant with the property on both shores and degree at most sqrt(2 n)+O(n^(21/80)) for every sufficiently large n. The construction repairs homology semibiplanes, pads by matched duplication, and completes to regularity. The all-order error term invokes the published Baker-Harman-Pintz prime-interval theorem; the formal transfer keeps that input as an explicit hypothesis."
+keywords:
+  - "double Hall property"
+  - "bipartite graphs"
+  - "finite geometry"
+  - "extremal graph theory"
+preferred-citation:
+  type: article
+  title: "Asymptotically optimal degree for the double Hall property"
+  authors:
+    - family-names: Tripodo
+      given-names: John
+      orcid: https://orcid.org/0009-0006-9180-4953
+  year: 2026
+  version: "1.0.1"
+  status: preprint
+  doi: 10.5281/zenodo.23552249
+  url: https://zenodo.org/records/23552249
+  notes: "Manuscript CC BY 4.0, version 1.0.1."

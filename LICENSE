@@ -1,0 +1,16 @@
+Copyright (c) 2026 John Tripodo
+
+The original manuscript (paper.tex and paper.pdf) and original research prose
+are licensed under Creative Commons Attribution 4.0 International (CC-BY-4.0).
+The full text is in licenses/CC-BY-4.0.txt:
+https://creativecommons.org/licenses/by/4.0/
+
+Original program and formalization source code, original configuration,
+and the author's original generated verification outputs are licensed under
+the MIT License in licenses/MIT.txt. Accompanying reproduction documentation
+may also be used under the MIT License as associated software documentation.
+
+These grants apply only to rights held by John Tripodo. Third-party notices,
+license texts and attributed materials retain their respective terms.
+Mathematical facts and cited theorems are not claimed as proprietary work.
+See THIRD_PARTY_NOTICES.md for attribution and dependency licenses.

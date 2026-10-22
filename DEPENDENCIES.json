@@ -1,0 +1,63 @@
+{
+  "lean": "leanprover/lean4:v4.31.0-rc1",
+  "mathlib_commit": "0ed37c9258f123a2c76a2175596f75c2bd50f941",
+  "packages": [
+    {
+      "name": "mathlib",
+      "url": "https://github.com/leanprover-community/mathlib4",
+      "commit": "0ed37c9258f123a2c76a2175596f75c2bd50f941",
+      "license_file": "licenses/mathlib.txt"
+    },
+    {
+      "name": "plausible",
+      "url": "https://github.com/leanprover-community/plausible",
+      "commit": "9196a81145e1e291a1469288e77392b0e1b9a493",
+      "license_file": "licenses/plausible.txt"
+    },
+    {
+      "name": "LeanSearchClient",
+      "url": "https://github.com/leanprover-community/LeanSearchClient",
+      "commit": "c5d5b8fe6e5158def25cd28eb94e4141ad97c843",
+      "license_file": "licenses/LeanSearchClient.txt"
+    },
+    {
+      "name": "importGraph",
+      "url": "https://github.com/leanprover-community/import-graph",
+      "commit": "6db47de43aa7f516708053ae2fdadd29dd9baaaa",
+      "license_file": "licenses/importGraph.txt"
+    },
+    {
+      "name": "proofwidgets",
+      "url": "https://github.com/leanprover-community/ProofWidgets4",
+      "commit": "85bb7e7637e84a7d9803be7d954579fdae42c64b",
+      "license_file": "licenses/proofwidgets.txt"
+    },
+    {
+      "name": "aesop",
+      "url": "https://github.com/leanprover-community/aesop",
+      "commit": "fafca80479ff95e041d84373dda7122adf1295f2",
+      "license_file": "licenses/aesop.txt"
+    },
+    {
+      "name": "Qq",
+      "url": "https://github.com/leanprover-community/quote4",
+      "commit": "8d33324ee877e9735d2829bc6f1f439e60cf98b1",
+      "license_file": "licenses/Qq.txt"
+    },
+    {
+      "name": "batteries",
+      "url": "https://github.com/leanprover-community/batteries",
+      "commit": "708b057842c4cd0845fba132bd94b08493f6fc42",
+      "license_file": "licenses/batteries.txt"
+    },
+    {
+      "name": "Cli",
+      "url": "https://github.com/leanprover/lean4-cli",
+      "commit": "48bdcff4c5fa27e09028f9f330e59baa0d4640cf",
+      "license_file": "licenses/Cli.txt"
+    }
+  ],
+  "runtime_packages_bundled": false,
+  "lean_compiler_commit": "fd009949156901e6cf15b6d9bf1122294b8e697a",
+  "lean_license_file": "licenses/Lean.txt"
+}
