@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Please cite the manuscript version using the pinned GitHub PDF URL below. The former Zenodo DOI is historical."
+message: "Published Hexagon preprint hexagon:2610.00462v1; cite the versioned record and pinned GitHub PDF. The former Zenodo DOI is historical."
 type: software
 license: MIT
 title: "Asymptotically optimal degree for the double Hall property"
@@ -25,4 +25,8 @@ preferred-citation:
   version: "1.0.1"
   status: preprint
   url: https://github.com/jjtripodo-lgtm/double-hall-optimal-degree/blob/724ed6a8e76b6818e4a0a27b2ab0a16c457a5aa8/paper.pdf
-  notes: "Manuscript CC BY 4.0, version 1.0.1. Former DOI 10.5281/zenodo.23552249 identifies the Zenodo deposit withdrawn on 22 October 2026; the manuscript remains available on GitHub."
+  identifiers:
+    - type: url
+      value: https://hexagonmath.org/2610.00462?version=1
+      description: Published Hexagon preprint hexagon:2610.00462v1; confirmed by publisher email 22 October 2026, no DOI assigned.
+  notes: "Manuscript CC BY 4.0, GitHub version 1.0.1. Hexagon publication confirmed 22 October 2026; not peer-reviewed. Former DOI 10.5281/zenodo.23552249 identifies the withdrawn Zenodo deposit. The preferred URL above remains an immutable GitHub PDF; exact Hexagon/GitHub file identity was not reverified."
