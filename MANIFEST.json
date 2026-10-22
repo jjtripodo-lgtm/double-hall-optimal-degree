@@ -19,8 +19,8 @@
       "sha256": "026bc60ea845b2528bffa228ef66efff87ce700ca070cd60241163b2498825a6"
     },
     "CITATION.cff": {
-      "bytes": 1360,
-      "sha256": "80eaa5456d603ad1f55ee33214027f106e6c0a2b3b2d19b92259a2f5ced595f8"
+      "bytes": 1599,
+      "sha256": "7a2f4050d29351e5c243828f1c4cc541c9d33de9ed8d59cabbfbc1756701e4dc"
     },
     "DEPENDENCIES.json": {
       "bytes": 2179,
@@ -39,12 +39,12 @@
       "sha256": "c89b75e1486bd98c4f7cf4dac6c8b102d904cc089b858a617f9ca13b49112846"
     },
     "README.md": {
-      "bytes": 1921,
-      "sha256": "f380550a3050452884c63b025ae42821a3fc9e186cb0f451769d52aa3a291659"
+      "bytes": 2281,
+      "sha256": "2e8a466ad788b216c055d95d870ab0589bd6b49b95d6c94315c95e91ac95ae90"
     },
     "RELEASE_NOTES.md": {
-      "bytes": 862,
-      "sha256": "dc75e8d8f464b70a8a6ede9b3e800425a985d4abb27cdd71c98fd63d01b2c6ec"
+      "bytes": 1145,
+      "sha256": "5ce04376a65d1b3d5014f4c8a58820707fae25ae2a8a71f27bf44b25966f0a14"
     },
     "REPRODUCE.md": {
       "bytes": 2046,
@@ -55,8 +55,8 @@
       "sha256": "a8f7a61c061655b77cd6063b6eda5fa105f81e7d5c28d437c501f843f1680251"
     },
     "VERSION.json": {
-      "bytes": 717,
-      "sha256": "a52aaacb714a728bcc64de76997f81c3b6fecb84b57890fa4a7b4c68898277e3"
+      "bytes": 1192,
+      "sha256": "947cfcaf77ccea8df4fca34aeb6c34e331c88693307562afaf00b9c54c7395b1"
     },
     "build_paper.py": {
       "bytes": 2271,
@@ -67,8 +67,8 @@
       "sha256": "d599278b6e64c28a71e6dc2e7a194b9c9e8db63ffdb9cc969c00e41967ee9fff"
     },
     "citation.bib": {
-      "bytes": 282,
-      "sha256": "0a412ca24975df9d95dffc835de03ca9448bd48aa16c8e716c573d9c002099dd"
+      "bytes": 468,
+      "sha256": "3d01750d05bac9b3357c4e888d55ea579715fde3c158306894fe21827429252b"
     },
     "companion/AxiomAudit.lean": {
       "bytes": 599,
@@ -221,6 +221,10 @@
     "paper.tex": {
       "bytes": 23991,
       "sha256": "f4f070a6f8b6ff0dbb884b2c4e52556ed8d09e5387cd5de62ccd016bdfb1aeca"
+    },
+    "publication_history/README.md": {
+      "bytes": 930,
+      "sha256": "7db8384e42e023b8b4ca486cfbfad9b48ad94e28d2c371f2b3d9dc5c82d4b879"
     },
     "verification/EDITORIAL_VALIDATION.json": {
       "bytes": 1921,

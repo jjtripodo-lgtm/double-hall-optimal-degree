@@ -1,17 +1,25 @@
 {
   "version": "1.0.1",
   "prepared": "2026-10-22",
-  "status": "PUBLISHED_ZENODO",
+  "status": "AVAILABLE_ON_GITHUB",
   "title": "Asymptotically optimal degree for the double Hall property",
   "author": "John Tripodo",
   "orcid": "0009-0006-9180-4953",
   "paper_tex_sha256": "f4f070a6f8b6ff0dbb884b2c4e52556ed8d09e5387cd5de62ccd016bdfb1aeca",
   "paper_pdf_sha256": "0065147c616fd20290ebac0ebb79259a9e9a26774904fe0e159191548739e05d",
-  "paper_doi": "10.5281/zenodo.23552249",
+  "paper_doi": null,
   "public_repository": "https://github.com/jjtripodo-lgtm/double-hall-optimal-degree",
   "manuscript_license": "CC-BY-4.0",
   "code_license": "MIT",
   "fresh_lean_replay": false,
   "hexagon_status": "SUBMITTED_AWAITING_MODERATION_NOT_PUBLIC",
-  "hexagon_id": "2610.00462v1"
+  "hexagon_id": "2610.00462v1",
+  "paper_url": "https://github.com/jjtripodo-lgtm/double-hall-optimal-degree/blob/724ed6a8e76b6818e4a0a27b2ab0a16c457a5aa8/paper.pdf",
+  "historical_zenodo_deposit": {
+    "doi": "10.5281/zenodo.23552249",
+    "record_url": "https://zenodo.org/records/23552249",
+    "status": "DEPOSIT_WITHDRAWN",
+    "withdrawn_on": "2026-10-22",
+    "note": "The Zenodo deposit was withdrawn by the author. The manuscript remains available on GitHub; its scientific content and license are unchanged."
+  }
 }

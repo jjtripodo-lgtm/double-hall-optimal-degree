@@ -4,4 +4,4 @@ The title now states asymptotic optimality. The repair remark states optimal ord
 
 The amended PDF was built and rendered with Tectonic 0.17.0. The original pdfLaTeX build script is retained. Finite controls pass in ordinary and optimized Python with identical outputs. No new formal compilation or external human peer review is claimed.
 
-Published on Zenodo: https://doi.org/10.5281/zenodo.23552249. Publication metadata was updated for this public repository; manuscript and mathematical source bytes are unchanged.
+Hosting update, 22 October 2026: the author voluntarily withdrew the Zenodo deposit following review of repository eligibility, formerly DOI https://doi.org/10.5281/zenodo.23552249. The manuscript remains available at https://github.com/jjtripodo-lgtm/double-hall-optimal-degree/blob/724ed6a8e76b6818e4a0a27b2ab0a16c457a5aa8/paper.pdf. Publication metadata changed only; manuscript and mathematical source bytes are unchanged. See publication_history/README.md.
