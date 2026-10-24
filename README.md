@@ -2,6 +2,10 @@
 
 John Tripodo | [ORCID](https://orcid.org/0009-0006-9180-4953) | manuscript version 1.0.1
 
+**Start here:** [Hexagon preprint hexagon:2610.00462v1](https://hexagonmath.org/2610.00462v1) · [Immutable version 1.0.1 PDF](https://github.com/jjtripodo-lgtm/double-hall-optimal-degree/blob/724ed6a8e76b6818e4a0a27b2ab0a16c457a5aa8/paper.pdf) · [Reader guide and scoped review questions](READER_GUIDE.md). Hexagon is moderated preprint hosting, not independent peer review; no active DOI is assigned. The withdrawn Zenodo identifier mentioned below is for historical provenance only.
+
+**Other public papers:** [Separated distances](https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension) · [Sparse determinants](https://github.com/jjtripodo-lgtm/sparse-projective-plane-determinants).
+
 For every sufficiently large n, a deterministic balanced regular bipartite graph has n vertices on each side, the double Hall property on both sides, and degree at most sqrt(2n)+O(n^(21/80)). The repair-degree lower bound establishes optimal order of magnitude. The main asymptotic theorem is unchanged in this editorial revision.
 
 Read [paper.pdf](paper.pdf), [paper.tex](paper.tex), [REPRODUCE.md](REPRODUCE.md), and [FORMAL_SCOPE.md](FORMAL_SCOPE.md). Citation metadata is in CITATION.cff and citation.bib. The manuscript and original research prose are CC BY 4.0; original code is MIT. Third-party licenses are retained.
